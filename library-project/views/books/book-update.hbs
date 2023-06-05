@@ -1,0 +1,21 @@
+<h2>Update a book</h2>
+
+<form method="post" action="/books/{{bookId._id}}/update">
+  <label> Title:
+    <input type="text" name="title" value="{{bookId.title}}"/>
+  </label>
+
+  <label> Author:
+    <input type="text" name="author" value="{{bookId.author}}"/>
+  </label>
+
+  <label> Description:
+    <textarea name="description" cols="30" rows="4">{{bookId.description}}</textarea>
+  </label>
+
+  <label> Rate:
+    <input type="number" name="rating" min="1" max="10" value="{{bookId.rating}}"/>
+  </label>
+
+  <button type="submit"> Update </button>
+</form>
